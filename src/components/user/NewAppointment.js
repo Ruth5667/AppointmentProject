@@ -49,6 +49,7 @@ const  NewAppointment=observer(()=> {
         window.alert("The date is already taken, please enter another date")
         }
      }, [valid,invalidDate])
+     const currentDate = new Date().toISOString().split('T')[0]; // Get the current date in 'YYYY-MM-DD' format
 
     return (<>
      <Container maxWidth="sm" style={{ marginTop: '50px' }}></Container>
@@ -128,11 +129,14 @@ const  NewAppointment=observer(()=> {
             {/* <label>dateTime</label>
             <input {...register("dateTime")} placeholder="dateTime" id={!invalidDate?"blur":"dateTime"}/>
             <br /> */}
+
             <TextField
            sx={{ m: 1, width: '25ch' }}
            variant="filled"
         //    id="filled-start-adornment"
           type="date"
+          inputProps={{ min: currentDate }}
+          // min={new Date().toISOString().split("T")[0]}
         //   autoComplete="current-password"
           {...register("dateTime")}
         //   placeholder="dateTime"
