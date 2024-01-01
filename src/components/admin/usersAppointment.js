@@ -18,7 +18,8 @@ export default function UsersAppointment() {
             let date = new Date(e.dateTime);
             if (sameDay(date)) e.scheduler = 'TODAY';
             else if (sameWeek(date)) e.scheduler = 'THISWEEK';
-            else e.scheduler = 'FUTER'});
+            else e.scheduler = 'FUTER'
+        });
     }
     function sameDay(date) {
 
@@ -37,16 +38,23 @@ export default function UsersAppointment() {
         setAppointmentsData(datajson)
     }
     return (
-        <> <div style={{ display: "flex", justifyContent: "center", alignItems: "center", margin: "auto", alignItems: "center" }}>
-            <Button variant="contained" color="success" name="login" type="submit" endIcon={<HomeIcon />} onClick={() => nav('/adminPage')}>HomePage</Button></div>
+        <> <p style={{ color: 'green', fontSize: 'xxx-large' }}>APPOINTMENTS</p>
             <div> {appointmentsData?.length > 0 && appointmentsData.map((i) =>
                 <Appointment serviceType={i.serviceType} clientName={i.clientName}
-                dateTime={i.dateTime} scheduler={i.scheduler} />)}</div></>)
+                    scheduler={i.scheduler} />)}</div>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", margin: "auto", alignItems: "center" }}>
+              <br/><br/>  <Button variant="contained" color="success" name="login" type="submit" endIcon={<HomeIcon />} onClick={() => nav('/adminPage')}>HomePage</Button></div>
+        </>)
+}
+
+const divStyle = {
+    width: '300px',
+    marginLeft: '40%',
 }
 export function Appointment(props) {
-    return (<div className={props.scheduler === "TODAY" ? "TODAY" : props.scheduler === "THISWEEK" ? "THISWEEK" :"GREEN"}>
+    return (<div style={divStyle} className={props.scheduler === "TODAY" ? "TODAY" : props.scheduler === "THISWEEK" ? "THISWEEK" : "GREEN"}>
         <p>serviceType: {props.serviceType}</p>
-        <p>dateTime: {props.dateTime}</p>
+        {/* <p>dateTime: {props.dateTime}</p> */}
         <p>clientName: {props.clientName}</p>
     </div>)
 }

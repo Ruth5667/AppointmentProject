@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-// import { useRouter } from "next/router";
 import { observer } from "mobx-react"
 import dataMobx from '../dataStore/mobx'
 import Box from '@mui/material/Box';
@@ -22,8 +21,6 @@ const LoginAdmin = observer(()=>
         setPassword("");
     }
 }, [loginFailed])
- // const router = useRouter();
-
    function handleSubmit(){
     console.log("adminName: "+adminName);
     const data ={'name':adminName,'password':password};
