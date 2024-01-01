@@ -37,7 +37,7 @@ const BusinessDetails = observer(()=>
     }
     function handleClick() {
         MobxData.setEdit(true);
-        MobxData.edit&&nav('updatedatails')
+        !MobxData.edit&&nav('updatedatails')
 
     }
     function handleSave() {
@@ -137,7 +137,7 @@ const BusinessDetails = observer(()=>
         //   readOnly={!MobxData.edit}
         />
    <div style = {{display: "flex", justifyContent: "center",alignItems:"center",margin: "auto",alignItems: "center"}}>
-            <br />{MobxData.isAdmin &&!MobxData.edit && <Button  variant="contained" color="success" name="edit" type="submit" endIcon={<CreateIcon />}
+            {MobxData.isAdmin &&!MobxData.edit && <Button style={{width:'180px'}} variant="contained" color="success" name="edit" type="submit" endIcon={<CreateIcon />}
              onClick={handleClick}>edit </Button>}
              </div>
    <div style = {{display: "flex", justifyContent: "center",alignItems:"center",margin: "auto",alignItems: "center"}}>

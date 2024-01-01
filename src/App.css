@@ -9,26 +9,27 @@ img {
 }
 .TODAY{
 
-background-color: #d61111;
+background-color: #c54f4f;
 }
 .THISWEEK{
 
-background-color: #d67011;
+background-color: #b0743c;
 
 }
 .GREEN{
   
-  background-color: chartreuse;
+  background-color: rgb(134, 183, 84);
 
 }
 #buttonS{
-  width: 170px;
-  font-size: x-large;
-  color: #282c34;
+  width: 350px;
+  font-size: large;
+  color:rgb(14, 14, 14);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   /* height: 50px; */
 }
 #blur{
-border: 3px solid rgb(240, 10, 10);
+border: 3px solid rgb(0, 0, 0);
 }
 .App-logo {
   height: 40vmin;
@@ -51,11 +52,16 @@ border: 3px solid rgb(240, 10, 10);
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.a :hover{
+  color: #20d60f;
+ transform:scale(1.1)
+}
 .App-link {
   color: #61dafb;
 }
-
+body{
+  background-color: pink;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
