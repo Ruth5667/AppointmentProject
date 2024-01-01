@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import LoginAdmin from './components/admin/loginAdmin';
+import Home from './components/home';
+import AdminPage from './components/admin/adminPage';
+import Service from './components/admin/Service';
+import UsersAppointment from './components/admin/usersAppointment';
+import NewService from './components/admin/NewService';
+import NewAppointment from './components/user/NewAppointment';
+import BasicCard from './components/user/BuisnessDetails';
+import MobxData from './components/dataStore/mobx';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+   <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='adminPage' element={<AdminPage />} />
+          <Route path='service' element={<Service />}></Route>
+          <Route path='appointments' element={<UsersAppointment />}></Route>
+          <Route path='login' element={<LoginAdmin />} />
+          <Route path='newService' element={<NewService />} />
+          <Route path='newAppointment' element={<NewAppointment />} />
+          <Route path='updatedatails' element={<BasicCard/>}/>
+          {/* <Route path='BusinessDetails' element={<BusinessDetails/>}></Route> */}
 
+          {/* <Route path='' element={}/> */}
+          {/* <Route path='*' element={<NotFoundView />} /> */}
+        </Routes>
+      </BrowserRouter>
+      
+    </div>
+    
+  )
+};
 export default App;

@@ -1,7 +1,35 @@
 .App {
   text-align: center;
-}
 
+}
+img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.TODAY{
+
+background-color: #d61111;
+}
+.THISWEEK{
+
+background-color: #d67011;
+
+}
+.GREEN{
+  
+  background-color: chartreuse;
+
+}
+#buttonS{
+  width: 170px;
+  font-size: x-large;
+  color: #282c34;
+  /* height: 50px; */
+}
+#blur{
+border: 3px solid rgb(240, 10, 10);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
