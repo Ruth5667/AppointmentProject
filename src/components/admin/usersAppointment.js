@@ -23,7 +23,7 @@ export default function UsersAppointment() {
     }
     function sameDay(date) {
 
-        return date.getDay() === new Date().getDay() && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear();
+        return date.getDate() === new Date().getDate() && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear();
     }
     function sameWeek(date) {
 

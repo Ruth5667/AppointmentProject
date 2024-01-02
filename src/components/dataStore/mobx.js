@@ -40,7 +40,7 @@ class MobxData {
         this.buisnessData = val;
     }
     initBuisnessData = async () => {
-        let data = await fetch('http://localhost:8787/businessData')
+        let data = await fetch('http://localhost:8787/businessData');
         let datajson = await data.json();
         this.buisnessData = datajson;
 

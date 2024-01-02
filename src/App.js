@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginAdmin from './components/admin/loginAdmin';
-import Home from './components/home';
+import Home from './components/user/home';
 import AdminPage from './components/admin/adminPage';
 import Service from './components/admin/Service';
 import UsersAppointment from './components/admin/usersAppointment';
