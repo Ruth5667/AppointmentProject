@@ -55,7 +55,7 @@ const BusinessDetails = observer(() => {
             catch(res => { console.log("error " + res); })
             .finally(console.log("finally"));
     }
-    return (name && <div>
+    return ( <div>
         {!MobxData.edit && <img src={logo} alt="Business Logo" />}
         <Box
             sx={{

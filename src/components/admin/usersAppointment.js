@@ -27,7 +27,7 @@ export default function UsersAppointment() {
     }
     function sameWeek(date) {
 
-        return date.getDay() - new Date().getDay() <= 7 && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear();
+        return date.getDate() - new Date().getDate() <= 7 && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear();
     }
     async function getApointment() {
         let data = await fetch('http://localhost:8787/appointments')
